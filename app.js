@@ -354,7 +354,7 @@ function processQuery(slacktoken, slackteam_id, query, username, callback){
                 var latestRelease = appContents.app.latest_release.release_version;
                 request.post({headers: {'content-type' : 'application/json'}, url: 'https://api.distelli.com/'
                   + secrets.distelli.username + '/envs/' + envName + '/deploy' + '?apiToken='+ secrets.distelli.apiToken + '',
-                  body: JSON.stringify({"release_version": latestRelease, "description": "Deploy via Slack by " + username, "stagger_size": 1, "stagger_delay": 60})}, function (error, response, body) {
+                  body: JSON.stringify({"release_version": latestRelease, "description": "Deploy via Slack by " + username})}, function (error, response, body) {
                     if(!error && response.statusCode == 200) {
                       var releaseContents = JSON.parse(body);
                       returnData ="<" + releaseContents.deployment.html_url + "|" + "Release " + latestRelease + " has been deployed to env " + envName + " " + username + " !" + ">";
