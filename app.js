@@ -18,12 +18,10 @@ app.post('/', function(req, res, callback){
 });
 
 function processQuery(slacktoken, slackteam_id, query, username, callback){
-  if((slacktoken != secrets.slack.token) || (slackteam_id != secrets.slack.team)){
-     returnData = "Bad slack creds!";
-     callback(returnData);
-  }
-
   query = query.toLowerCase();
+
+  if(slacktoken == secrets.slack.token){
+
 
   //List apps
   if(query == "list apps"){
@@ -399,6 +397,11 @@ function processQuery(slacktoken, slackteam_id, query, username, callback){
     "•Deploy latest to env [envName]\n•List Envs for App [AppName]";
     callback(returnData);
   }
+}
+else{
+  returnData = "Bad slack creds!";
+  callback(returnData);
+}
 }
 
 app.listen(port, function(){
