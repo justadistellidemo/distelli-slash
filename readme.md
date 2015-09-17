@@ -41,4 +41,4 @@ It should look something like this when you're done:
 
 Shoot me an email (alex at distelli.com) if you need a hand with setup!
 
-<img src="https://api.segment.io/v1/pixel/track?data=ew0KICAid3JpdGVLZXkiOiAiU0YzOUdwZ3hXeEF5bktacmtRa3NEa1UxZ2l1SXdDaWMiLA0KICAiYW5vbnltb3VzSWQiOiAiNTA3ZjE5MWU4MTBjMTk3MjlkZTg2MGVhIiwNCiAgImV2ZW50IjogIlZpZXdlZCBHaXRIdWIiLA0KICAicHJvcGVydGllcyI6IHsNCiAgICAicmVwbyI6ICJEaXN0ZWxsaS1TbGFzaCINCiAgfQ0KfQ==">
+<img src="https://api.segment.io/v1/pixel/track?data=ew0KICAid3JpdGVLZXkiOiAiU0YzOUdwZ3hXeEF5bktacmtRa3NEa1UxZ2l1SXdDaWMiLA0KICAidXNlcklkIjogImdpdGh1YiIsDQogICJldmVudCI6ICJWaWV3ZWQgR2l0SHViIiwNCiAgInByb3BlcnRpZXMiOiB7DQogICAgInJlcG8iOiAiRGlzdGVsbGktU2xhc2giDQogIH0NCn0=">
