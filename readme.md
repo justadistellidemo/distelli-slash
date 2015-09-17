@@ -40,3 +40,5 @@ It should look something like this when you're done:
 12. `/distelli Deploy latest to env [envName]`: Deploy the latest release to an environment.
 
 Shoot me an email (alex at distelli.com) if you need a hand with setup!
+
+<img src="https://api.segment.io/v1/pixel/track?data=ew0KICAid3JpdGVLZXkiOiAiU0YzOUdwZ3hXeEF5bktacmtRa3NEa1UxZ2l1SXdDaWMiLA0KICAiZXZlbnQiOiAiVmlld2VkIEdpdEh1YiIsDQogICJwcm9wZXJ0aWVzIjogew0KICAgICJyZXBvIjogIkRpc3RlbGxpLVNsYXNoIg0KICB9DQp9">
