@@ -376,15 +376,37 @@ function processQuery(slacktoken, slackteam_id, query, username, callback){
               returnData = "We couldn't find that env, " + username + "!";
               callback(returnData);
             }
-          })
-      }
+        })
+    }
+
+    //Deploy [releaseNum] to env [envName]
+    else if(query.substring(0, 8) == "deploy v"){
+      var queryArray = query.split(" ");
+      var releaseNum = queryArray[1];
+      var envName = queryArray[4];
+      request.post({headers: {'content-type' : 'application/json'}, url: 'https://api.distelli.com/'
+        + secrets.distelli.username + '/envs/' + envName + '/deploy' + '?apiToken='+ secrets.distelli.apiToken + '',
+        body: JSON.stringify({"release_version": releaseNum, "description": "Deploy via Slack by " + username})}, function (error, response, body) {
+          if(!error && response.statusCode == 200) {
+            console.log(body);
+            var releaseContents = JSON.parse(body);
+            returnData = "<" + releaseContents.deployment.html_url + "|" + "Release " + releaseNum + " has been deployed to env " + envName + " " + username + " !" + ">";
+            callback(returnData);
+          }
+          else{
+            console.log(body);
+            returnData = "We couldn't find env " + envName + ", " + username + "!";
+            callback(returnData);
+          }
+        })
+     }
 
     //Help
     else if(query == 'help'){
       returnData = "Here are the commands I recognize:\n•List Apps\n•List Builds\n•List Envs\n•List Servers\n" +
       "•List Servers for Env [Env Name]\n•List Release for App [App Name]\n•Create App [App Name]\n" +
       "•Create Env [Env Name] for App [AppName]\n•Restart Env [Env Name]\n•Latest release for app [appName]\n" +
-      "•Deploy latest to env [envName]\n•List Envs for App [AppName]";
+      "•Deploy latest to env [envName]\n•List Envs for App [AppName]\n•Deploy [vXX] to env [envName]";
       callback(returnData);
     }
 
@@ -393,7 +415,7 @@ function processQuery(slacktoken, slackteam_id, query, username, callback){
       returnData = "I didn't recognize that command " + username + ". Here are the commands I recognize:\n•List Apps\n" +
       "•List Builds\n•List Envs\n•List Servers\n•List Servers for Env [Env Name]\n•List Release for App [App Name]\n" +
       "•Create App [App Name]\n•Create Env [Env Name] for App [AppName]\n•Restart Env [Env Name]\n•Latest release for app [appName]\n" +
-      "•Deploy latest to env [envName]\n•List Envs for App [AppName]";
+      "•Deploy latest to env [envName]\n•List Envs for App [AppName]\n•Deploy [vXX] to env [envName]";
       callback(returnData);
     }
   }

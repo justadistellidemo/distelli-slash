@@ -38,6 +38,7 @@ It should look something like this when you're done:
 10. `/distelli Restart Env [Env Name]`: Restart an existing environment.
 11. `/distelli Latest release for app [appName]`: Get information on the latest release associated with an app.
 12. `/distelli Deploy latest to env [envName]`: Deploy the latest release to an environment.
+13. `/distelli Deploy [vXX] to env [envName]`: Deploy a specific releases to an environment.
 
 Shoot me an email (alex at distelli.com) if you need a hand with setup!
 
