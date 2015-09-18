@@ -21,20 +21,13 @@ app.post('/', function(req, res, callback){
 function processQuery(slacktoken, slackteam_id, query, username, callback){
   query = query.toLowerCase();
 
-  console.log("TOKEN", slacktoken);
-  console.log("ENV", secrets.team.slackToken)
-  console.log("TEAM", slackteam_id);
-  console.log("ENV", secrets.team.slackTeam)
-
   if(slacktoken == secrets.team.slackToken && slackteam_id == secrets.team.slackTeam){
 
   //List apps
     if(query == "list apps"){
       request('https://api.distelli.com/' + secrets.team.username + '/apps?apiToken='
         + secrets.users[username] + '&max_results=50', function (error, response, body) {
-          console.log("BODY", body);
           if(!error && response.statusCode == 200) {
-            var contents = JSON.parse(body);
             console.log(contents);
             var returnData = [];
             for(var i =0; i < contents.apps.length; i++){
