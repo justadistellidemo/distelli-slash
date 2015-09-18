@@ -21,6 +21,13 @@ app.post('/', function(req, res, callback){
 function processQuery(slacktoken, slackteam_id, query, username, callback){
   query = query.toLowerCase();
 
+  console.log("TOKEN", slacktoken);
+  console.log("ENV", secrets.team.slackToken)
+  console.log("TEAM", slackteam_id);
+  console.log("ENV", secrets.team.slackTeam)
+
+
+
   if(slacktoken == secrets.team.slackToken && slackteam_id == secrets.team.slackTeam){
 
   //List apps
