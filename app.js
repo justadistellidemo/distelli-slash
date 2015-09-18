@@ -26,8 +26,6 @@ function processQuery(slacktoken, slackteam_id, query, username, callback){
   console.log("TEAM", slackteam_id);
   console.log("ENV", secrets.team.slackTeam)
 
-
-
   if(slacktoken == secrets.team.slackToken && slackteam_id == secrets.team.slackTeam){
 
   //List apps
