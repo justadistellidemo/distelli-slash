@@ -430,3 +430,4 @@ function processQuery(slacktoken, slackteam_id, query, username, callback){
 app.listen(port, function(){
   console.log('DistelliSlash is alive on port ' + port + '.');
 })
+

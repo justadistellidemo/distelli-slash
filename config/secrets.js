@@ -5,7 +5,7 @@ module.exports = {
     slackToken: process.env.SLACKTOKEN,
     slackTeam: process.env.SLACKTEAM
   },
-  allowUsers: {
+  users: {
     //SlackUsername: ApiToken
     al: process.env.APITOKEN
   },
