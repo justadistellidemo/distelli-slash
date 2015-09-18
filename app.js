@@ -2,7 +2,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 var secrets = require('./config/secrets');
-var fs = require('fs');
 
 var app = express();
 var port = process.env.PORT || 3000;
