@@ -49,7 +49,9 @@ function processQuery(slacktoken, slackteam_id, query, username, callback){
       var marker = queryArray[3];
       request('https://api.distelli.com/' + secrets.team.username + '/apps?apiToken='
         + secrets.users[username] + '&marker=' + marker + '&max_results=50', function (error, response, body) {
+          console.log(body);
           if(!error && response.statusCode == 200) {
+            console.log(body);
             var contents = JSON.parse(body);
             var returnData = [];
             for(var i =0; i < contents.apps.length; i++){
