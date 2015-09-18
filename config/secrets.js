@@ -8,9 +8,5 @@ module.exports = {
   users: {
     //SlackUsername: ApiToken
     al: process.env.APITOKEN
-  },
-  slack: {
-    token: process.env.SLACKTOKEN,
-    team: process.env.SLACKTEAM
   }
 }
