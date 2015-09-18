@@ -1,7 +1,12 @@
 module.exports = {
-  distelli: {
+  team: {
     apiToken: process.env.APITOKEN,
-    username: process.env.USERNAME
+    username: process.env.USERNAME,
+    slackToken: process.env.SLACKTOKEN,
+    slackTeam: process.env.SLACKTEAM
+  },
+  allowUsers: {
+    al: process.env.APITOKEN
   },
   slack: {
     token: process.env.SLACKTOKEN,
