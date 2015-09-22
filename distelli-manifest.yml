@@ -4,6 +4,7 @@ alexleventer/distelli-slash:
     - '*'
 
   PreRelease:
+    - sudo apt-get -y install npm
     - npm install
     - npm update
 
