@@ -1,4 +1,3 @@
-#Switch "distelli" to your Distelli username:
 alexleventer/distelli-slash:
   PkgInclude:
     - '*'
