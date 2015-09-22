@@ -6,6 +6,7 @@ alexleventer/distelli-slash:
     - sudo apt-get -y update
     - sudo apt-get -y install nodejs
     - sudo apt-get -y install npm
+    - npm cache clean
     - sudo npm install
 
   PreInstall:
