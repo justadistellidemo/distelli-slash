@@ -18,11 +18,9 @@
   },
   "homepage": "https://github.com/alexleventer/distelli-slash",
   "dependencies": {
-    "async": "^1.4.2",
     "body-parser": "^1.13.3",
     "distelli": "0.0.9",
     "express": "^4.13.3",
-    "jsonfile": "^2.2.2",
     "request": "^2.61.0"
   }
 }
