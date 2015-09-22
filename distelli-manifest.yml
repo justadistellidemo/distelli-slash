@@ -6,6 +6,7 @@ alexleventer/distelli-slash:
     - sudo apt-get -y update
     - sudo apt-get -y install nodejs
     - sudo apt-get -y install npm
+    - npm config set registry https://registry.npmjs.org/
     - sudo npm install
 
   PreInstall:
