@@ -1,5 +1,5 @@
 #Switch "distelli" to your Distelli username:
-alexleventer/distelli-bot:
+alexleventer/distelli-slash:
   PkgInclude:
     - '*'
 
