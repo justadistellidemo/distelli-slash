@@ -1,6 +1,6 @@
 alexleventer/distelli-slash:
   PkgInclude:
-    - '*'
+    - '**'
 
   PreRelease:
     - sudo apt-get -y update
