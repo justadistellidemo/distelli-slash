@@ -411,7 +411,7 @@ function processQuery(slacktoken, slackteam_id, query, username, callback){
       callback(returnData);
     }
 
-    //If command is not understood
+    //Default text
     else{
       returnData = "I didn't recognize that command " + username + ". Here are the commands I recognize:\n•List Apps\n" +
       "•List Builds\n•List Envs\n•List Servers\n•List Servers for Env [Env Name]\n•List Release for App [App Name]\n" +
