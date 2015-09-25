@@ -6,8 +6,8 @@ module.exports = {
   },
   users: {
     //SlackUsername: ApiToken
-    al: process.env.ALTOKEN,
-    christopher.schwarz: process.env.CTOKEN,
-    kdehoop: process.env.KTOKEN
+    "al": process.env.ALTOKEN,
+    "christopher.schwarz": process.env.CTOKEN,
+    "kdehoop": process.env.KTOKEN
   }
 }
