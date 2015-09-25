@@ -23,10 +23,10 @@ function processQuery(slacktoken, slackteam_id, query, username, callback){
 
   if(slacktoken == secrets.team.slackToken && slackteam_id == secrets.team.slackTeam){
 
-  //List apps
+    //List apps
     if(query == "list apps"){
       request('https://api.distelli.com/' + secrets.team.username + '/apps?apiToken='
-        + secrets.users[username] + '&max_results=50', function (error, response, body) {
+        + secrets.users[username], function (error, response, body) {
           if(!error && response.statusCode == 200) {
             console.log(contents);
             var returnData = [];
