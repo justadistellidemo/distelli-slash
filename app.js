@@ -309,11 +309,11 @@ function processQuery(slacktoken, slackteam_id, query, username, callback){
             for(var i = 0; i < contents.releases.length; i++){
               var tags = contents.releases[i].tags;
               if(tags != null){
-                var desc = contents.releases[i].description.substr(0, contents.releases[i].description.indexOf('\n'));
+                var desc = contents.releases[i].description;
                 returnData.push("<" + contents.releases[i].html_url + "|" + contents.releases[i].release_version + ": " + desc  + " (" + tags + ")" + ">");
               }
               else{
-                var desc = contents.releases[i].description.substr(0, contents.releases[i].description.indexOf('\n'));
+                var desc = contents.releases[i].description;
                 returnData.push("<" + contents.releases[i].html_url + "|" + contents.releases[i].release_version + ": " + desc + ">");
               }
             }
